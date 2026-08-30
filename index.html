@@ -339,21 +339,16 @@
       <div class="stack-photos">
         <div class="wheel-stage">
           <div class="wheel-card" data-idx="0"><picture>
-                <source srcset="photo/rotation/lash-lift-avant.avif" type="image/avif">
-                <source srcset="photo/rotation/lash-lift-avant.webp" type="image/webp">
-                <img src="photo/rotation/lash-lift-avant.jpg" alt="Avant le Lash Lift Coréen — cils naturels" loading="lazy" />
-              </picture></div>
-          <div class="wheel-card" data-idx="1"><picture>
                 <source srcset="photo/rotation/lash-lift-apres.avif" type="image/avif">
                 <source srcset="photo/rotation/lash-lift-apres.webp" type="image/webp">
                 <img src="photo/rotation/lash-lift-apres.jpg" alt="Après le Lash Lift Coréen — regard sublimé" loading="lazy" />
               </picture></div>
-          <div class="wheel-card" data-idx="2"><picture>
+          <div class="wheel-card" data-idx="1"><picture>
                 <source srcset="photo/rotation/lash-lift-detail.avif" type="image/avif">
                 <source srcset="photo/rotation/lash-lift-detail.webp" type="image/webp">
                 <img src="photo/rotation/lash-lift-detail.jpg" alt="Résultat Lash Lift Coréen — cils courbés" loading="lazy" />
               </picture></div>
-          <div class="wheel-card" data-idx="3"><picture>
+          <div class="wheel-card" data-idx="2"><picture>
                 <source srcset="photo/rotation/lash-lift-regard.avif" type="image/avif">
                 <source srcset="photo/rotation/lash-lift-regard.webp" type="image/webp">
                 <img src="photo/rotation/lash-lift-regard.jpg" alt="Lash Lift Coréen — regard lumineux" loading="lazy" />
@@ -378,18 +373,14 @@
           <p class="stack-sidebar__reviews-label">CE QU'ELLES EN PENSENT</p>
           <div class="stack-reviews-wrap">
             <div class="stack-review active" data-idx="0">
-              <p class="stack-review__quote">« Le Lash Lift a complètement changé mon regard, mes cils sont enfin courbés à la perfection ! »</p>
-              <p class="stack-review__author">— Camille, Lash Lift Coréen</p>
-            </div>
-            <div class="stack-review" data-idx="1">
               <p class="stack-review__quote">« Je me réveille avec un regard sublimé sans rien faire, exactement ce que je voulais. »</p>
               <p class="stack-review__author">— Laura, Lash Lift Coréen</p>
             </div>
-            <div class="stack-review" data-idx="2">
+            <div class="stack-review" data-idx="1">
               <p class="stack-review__quote">« J'avais peur que ce soit trop marqué mais le rendu est naturel et hyper lumineux. »</p>
               <p class="stack-review__author">— Sophie, Lash Lift Coréen</p>
             </div>
-            <div class="stack-review" data-idx="3">
+            <div class="stack-review" data-idx="2">
               <p class="stack-review__quote">« Un résultat bluffant sans une seule extension, mes cils n'ont jamais été aussi beaux. »</p>
               <p class="stack-review__author">— Émilie, Lash Lift Coréen</p>
             </div>
@@ -712,7 +703,7 @@
   <script>
     (function () {
       var current = 0;
-      var total = 4;
+      var total = 3;
 
       function renderWheel(idx) {
         var prevIdx = (idx - 1 + total) % total;
