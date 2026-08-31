@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=16" />
 </head>
 <body>
 
@@ -464,65 +464,23 @@
 
   </section>
 
-  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" />
+  <img class="wave wave--avis-top" src="photo/wave-cream-to-avis.svg" alt="" />
 
   <!-- ══════════════════════════════════════
-       AVIS CLIENTS  — beige
+       AVIS CLIENTS  — image pleine largeur
   ══════════════════════════════════════ -->
   <section class="reviews" id="avis">
-    <div class="reviews__inner">
-
-      <h2 class="reviews__title">Avis Clients</h2>
-
-      <div class="review">
-        <div class="review__head">
-          <div class="review__avatar">M</div>
-          <div>
-            <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review__score">5.0 / 5</p>
-          </div>
-        </div>
-        <p class="review__text">
-          "Chantal est incroyablement douée. Mon cuir chevelu n'a jamais été aussi détendu —
-          un vrai moment de lâcher-prise du début à la fin. Je me suis sentie super à l'aise
-          dans son institut. Je recommande à 100% !"
-        </p>
-      </div>
-
-      <div class="review review--alt">
-        <div class="review__head review__head--right">
-          <div>
-            <div class="review__stars review__stars--right">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review__score review__score--right">5.0 / 5</p>
-          </div>
-          <div class="review__avatar">S</div>
-        </div>
-        <p class="review__text review__text--right">
-          "J'avais peur d'essayer le Head Spa pour la première fois mais Chantal
-          a pris le temps de tout m'expliquer. Le résultat est magnifique et
-          la détente est vraiment au rendez-vous !"
-        </p>
-      </div>
-
-      <div class="review">
-        <div class="review__head">
-          <div class="review__avatar">C</div>
-          <div>
-            <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review__score">5.0 / 5</p>
-          </div>
-        </div>
-        <p class="review__text">
-          "Le soin évasion a complètement changé ma façon de me détendre, j'aurais dû essayer
-          bien plus tôt. Chantal est professionnelle, douce et vraiment à l'écoute.
-          Je reviens dès que possible !"
-        </p>
-      </div>
-
-    </div>
+    <picture>
+      <source media="(max-width: 768px)" srcset="photo/avisclientbeigetel.avif" type="image/avif">
+      <source media="(max-width: 768px)" srcset="photo/avisclientbeigetel.webp" type="image/webp">
+      <source media="(max-width: 768px)" srcset="photo/avisclientbeigetel.jpg">
+      <source srcset="photo/avisclientfondbeige.avif" type="image/avif">
+      <source srcset="photo/avisclientfondbeige.webp" type="image/webp">
+      <img class="reviews__img" src="photo/avisclientfondbeige.jpg" alt="Avis clientes Maison Chantal" loading="lazy" />
+    </picture>
   </section>
 
-  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" />
+  <img class="wave wave--avis-bottom" src="photo/wave-avis-to-cream.svg" alt="" />
 
   <!-- ══════════════════════════════════════
        INFOS PRATIQUES  — crème

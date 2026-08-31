@@ -1803,11 +1803,35 @@ a.contact-row:hover span:last-child {
 }
 
 /* ══════════════════════════════════════════════
-   SECTION 5 — AVIS CLIENTS  (brun)
+   SECTION 5 — AVIS CLIENTS  (image pleine largeur)
 ══════════════════════════════════════════════ */
 .reviews {
+  position: relative;
   background: var(--beige-deep);
-  padding: 24px var(--pad-x) 80px;
+  padding: 0;
+  line-height: 0;
+}
+
+.reviews__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+/* Les vagues autour de cette section passent par-dessus la photo */
+.wave--avis-top,
+.wave--avis-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.wave--avis-top {
+  margin-bottom: -60px;
+}
+
+.wave--avis-bottom {
+  margin-top: -60px;
 }
 
 .reviews__inner {
@@ -2521,7 +2545,7 @@ a.contact-row:hover span:last-child {
 
   /* ── Avis ── */
   .reviews {
-    padding: 40px var(--pad-x) 60px;
+    background: #f4d2ae;
   }
   .reviews__title {
     font-size: clamp(48px, 13vw, 72px);
@@ -2532,6 +2556,12 @@ a.contact-row:hover span:last-child {
   }
   .review__head {
     gap: 12px;
+  }
+  .wave--avis-top {
+    margin-bottom: -28px;
+  }
+  .wave--avis-bottom {
+    margin-top: -28px;
   }
 
   /* ── Infos / Contact ── */
