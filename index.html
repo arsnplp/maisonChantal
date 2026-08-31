@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
 
@@ -110,7 +110,8 @@
     <!-- Bouton réserver (mobile droite) + liens desktop -->
     <ul class="navbar__links">
       <li><a href="#prestations">Prestations</a></li>
-      <li><a href="#avantapres">Le Rituel</a></li>
+      <li><a href="#avantapres">Lash Lift Coréen</a></li>
+      <li><a href="#apropos">À propos</a></li>
       <li><a href="#avis">Avis</a></li>
       <li><a href="#infos">Contact</a></li>
       <li><a href="tel:+33651375834" class="navbar__rdv">Réserver</a></li>
@@ -123,7 +124,8 @@
     <button class="navbar__drawer-close" aria-label="Fermer" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">✕</button>
     <ul>
       <li><a href="#prestations" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Prestations</a></li>
-      <li><a href="#avantapres" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Le Rituel</a></li>
+      <li><a href="#avantapres" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Lash Lift Coréen</a></li>
+      <li><a href="#apropos" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">À propos</a></li>
       <li><a href="#avis" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Avis</a></li>
       <li><a href="#infos" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Contact</a></li>
       <li><a href="tel:+33651375834" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Réserver</a></li>
@@ -131,15 +133,35 @@
   </div>
 
   <!-- ══════════════════════════════════════
-       HERO  — plein écran image
+       HERO  — bande + photo
   ══════════════════════════════════════ -->
-  <section class="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <h1 class="hero__title">Maison Chantal</h1>
-      <p class="hero__suptitle">Head Spa &amp; Institut de Beauté à Lambesc, près d'Aix-en-Provence</p>
-      <p class="hero__tagline">L'art du bien-être et de la relaxation</p>
-      <a class="hero__cta" href="tel:+33651375834">Réserver ma séance</a>
+  <section class="hsplit">
+    <h1 class="hsplit__bigtitle">
+      <span class="hsplit__bigtitle-l1">Mais<span class="hsplit__bigtitle-l1-alt">on</span></span>
+      <span class="hsplit__bigtitle-l2">Chantal</span>
+    </h1>
+    <div class="hsplit__band">
+      <div class="hsplit__band-top">
+        <p class="hsplit__suptitle">Head Spa &amp; Institut de Beauté<br>à Lambesc, près d'Aix-en-Provence</p>
+      </div>
+      <a class="hsplit__thumb" href="#infos" aria-label="Voir l'institut">
+        <picture>
+          <source srcset="photo/institut/institut-2.avif" type="image/avif">
+          <source srcset="photo/institut/institut-2.webp" type="image/webp">
+          <img src="photo/institut/institut-2.jpg" alt="L'institut Maison Chantal" loading="lazy" />
+        </picture>
+        <span>Maison Chantal</span>
+      </a>
+    </div>
+    <div class="hsplit__photo">
+      <picture>
+        <source srcset="photo/header.avif" type="image/avif">
+        <source srcset="photo/header.webp" type="image/webp">
+        <img src="photo/header.jpg" alt="Rituel de relaxation Maison Chantal" />
+      </picture>
+      <div class="hsplit__caption">
+        <p>Choisissez le soin qui vous correspond aujourd'hui et réservez votre créneau — le reste, c'est nous qui nous en occupons.</p>
+      </div>
     </div>
   </section>
 
@@ -230,9 +252,9 @@
       <h2 class="services__title">PRESTATIONS</h2>
 
       <div class="services__intro">
-        <h3 class="services__intro-title">Head Spa Japonais</h3>
-        <p class="services__intro-text">Imaginez un soin qui régénère vos cheveux, apaise votre esprit et libère les tensions du quotidien… C'est le pouvoir du rituel japonais.</p>
-        <p class="services__intro-text">C'est quoi un head spa ? Véritable évasion sensorielle, il booste la circulation sanguine et réveille la vitalité de vos cheveux.</p>
+        <h3 class="services__intro-title">Six Univers de Soins</h3>
+        <p class="services__intro-text">Du Head Spa japonais aux soins du corps, en passant par l'épilation, les ongles et les cils : chaque prestation est pensée pour révéler votre beauté naturelle.</p>
+        <p class="services__intro-text">Chantal vous accueille dans un espace pensé pour votre bien-être, avec des soins personnalisés selon vos besoins et vos envies.</p>
       </div>
 
       <div class="arch-grid">
@@ -325,12 +347,12 @@
   <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" />
 
   <!-- ══════════════════════════════════════
-       LE RITUEL  — crème (stack scroll)
+       LASH LIFT CORÉEN  — crème (stack scroll)
   ══════════════════════════════════════ -->
   <section class="avantapres" id="avantapres">
     <div class="avantapres__header">
       <p class="section-label">NOTRE</p>
-      <h2 class="avantapres__title">Le Rituel</h2>
+      <h2 class="avantapres__title">Lash Lift Coréen</h2>
     </div>
 
     <div class="stack-section">
@@ -396,39 +418,23 @@
   <!-- ══════════════════════════════════════
        POURQUOI MAISON CHANTAL  — beige, pleine largeur
   ══════════════════════════════════════ -->
-  <section class="whyus">
+  <section class="whyus" id="apropos">
 
-    <div class="whyus__top">
-      <p class="whyus__label">POURQUOI CHOISIR</p>
-      <h2 class="whyus__title">Maison Chantal</h2>
-    </div>
-
-    <div class="whyus__grid">
-
-      <div class="whyus__card">
-        <span class="whyus__card-line"></span>
-        <p class="whyus__card-title">Un accueil sur mesure</p>
-        <p class="whyus__card-text">Je prends le temps de vous accueillir, de vous écouter et de comprendre vos besoins pour vous proposer le rituel Head Spa qui vous correspond.</p>
+    <div class="apropos__inner">
+      <div class="apropos__photo">
+        <picture>
+          <source srcset="photo/apropos.avif" type="image/avif">
+          <source srcset="photo/apropos.webp" type="image/webp">
+          <img src="photo/apropos.jpg" alt="L'ambiance sereine de Maison Chantal" loading="lazy" />
+        </picture>
       </div>
-
-      <div class="whyus__card">
-        <span class="whyus__card-line"></span>
-        <p class="whyus__card-title">Une parenthèse de détente</p>
-        <p class="whyus__card-text">Chaque rituel est pensé pour vous offrir une véritable parenthèse de bien-être dans un espace calme, apaisant et entièrement dédié.</p>
+      <div class="apropos__text">
+        <p class="section-label section-label--light">NOTRE</p>
+        <h2 class="apropos__title">À propos</h2>
+        <p class="apropos__para">Maison Chantal est née d'une passion pour le bien-être et le soin du cuir chevelu. Nichée au cœur de Lambesc, cette maison est pensée comme un cocon : un lieu où chaque rituel, inspiré des traditions japonaises, invite à ralentir et à se retrouver.</p>
+        <p class="apropos__para">Ici, pas de soin standardisé. Chaque rendez-vous est unique, adapté à vos besoins, dans un cadre chaleureux pensé pour votre bien-être.</p>
+        <a class="btn-rdv" href="tel:+33651375834">Réserver ma séance</a>
       </div>
-
-      <div class="whyus__card">
-        <span class="whyus__card-line"></span>
-        <p class="whyus__card-title">Rituels inspirés du Japon</p>
-        <p class="whyus__card-text">Je m'inspire des techniques japonaises de massage crânien et de soins capillaires, reconnues pour leur douceur, leur efficacité et le respect de votre cuir chevelu.</p>
-      </div>
-
-      <div class="whyus__card">
-        <span class="whyus__card-line"></span>
-        <p class="whyus__card-title">Un institut au cœur de Lambesc</p>
-        <p class="whyus__card-text">Je vous accueille dans un espace entièrement dédié, chaleureux et professionnel — pour un moment rien que pour vous.</p>
-      </div>
-
     </div>
 
   </section>
@@ -440,35 +446,20 @@
   ══════════════════════════════════════ -->
   <section class="libre">
 
-    <p class="libre__label">NOS</p>
-    <h2 class="libre__title">Valeurs</h2>
-
-    <div class="libre__grid">
-
-      <div class="libre__card">
-        <p class="libre__card-word">Bienveillance</p>
-        <span class="libre__card-line"></span>
-        <p class="libre__card-text">Chaque cliente est accueillie avec attention et douceur, sans jugement. Vous êtes ici pour vous — et ça se ressent.</p>
+    <div class="produits__inner">
+      <div class="produits__text">
+        <p class="libre__label">NOS</p>
+        <h2 class="libre__title">Produits</h2>
+        <p class="produits__para">Pour prendre soin de vous, j'utilise exclusivement les produits <strong>Phyt's</strong> — une marque française, <strong>100&nbsp;% bio et naturelle</strong>. Une sélection exigeante, pensée pour respecter votre peau et sublimer chaque rituel.</p>
+        <p class="produits__para">Parce que la qualité d'un soin commence par celle de ses produits, chaque texture est choisie pour son efficacité, sa douceur et son respect de votre peau comme de l'environnement.</p>
       </div>
-
-      <div class="libre__card">
-        <p class="libre__card-word">Excellence</p>
-        <span class="libre__card-line"></span>
-        <p class="libre__card-text">Des gestes précis, des rituels sur mesure et une technique maîtrisée pour un résultat toujours à la hauteur de vos attentes.</p>
+      <div class="produits__photo">
+        <picture>
+          <source srcset="photo/produits-phyts.avif" type="image/avif">
+          <source srcset="photo/produits-phyts.webp" type="image/webp">
+          <img src="photo/produits-phyts.jpg" alt="Gamme de produits Phyt's utilisée chez Maison Chantal" loading="lazy" />
+        </picture>
       </div>
-
-      <div class="libre__card">
-        <p class="libre__card-word">Authenticité</p>
-        <span class="libre__card-line"></span>
-        <p class="libre__card-text">Des rituels sur mesure, adaptés à votre cuir chevelu et à vos besoins — jamais un soin standard imposé.</p>
-      </div>
-
-      <div class="libre__card">
-        <p class="libre__card-word">Confiance</p>
-        <span class="libre__card-line"></span>
-        <p class="libre__card-text">Un espace dédié, calme et professionnel où vous pouvez vous détendre et vous laisser prendre soin de vous en toute sérénité.</p>
-      </div>
-
     </div>
 
   </section>
