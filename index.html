@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=21" />
+  <link rel="stylesheet" href="style.css?v=22" />
 </head>
 <body>
 
@@ -706,11 +706,47 @@
       document.querySelectorAll('.ba-slider').forEach(function (slider) {
         var range = slider.querySelector('.ba-slider__range');
         if (!range) return;
-        function update() {
-          slider.style.setProperty('--pos', range.value + '%');
+
+        function setPct(pct) {
+          pct = Math.max(0, Math.min(100, pct));
+          range.value = pct;
+          slider.style.setProperty('--pos', pct + '%');
         }
-        range.addEventListener('input', update);
-        update();
+
+        function setPctFromEvent(e) {
+          var rect = slider.getBoundingClientRect();
+          var pct = ((e.clientX - rect.left) / rect.width) * 100;
+          setPct(pct);
+        }
+
+        // Clavier / lecteurs d'écran : géré nativement par l'input range
+        range.addEventListener('input', function () {
+          slider.style.setProperty('--pos', range.value + '%');
+        });
+
+        // Souris + tactile : on pilote nous-mêmes le glisser via Pointer Events,
+        // plus fiable que le drag natif du range sur mobile.
+        var dragging = false;
+        range.addEventListener('pointerdown', function (e) {
+          dragging = true;
+          range.setPointerCapture(e.pointerId);
+          setPctFromEvent(e);
+        });
+        range.addEventListener('pointermove', function (e) {
+          if (!dragging) return;
+          e.preventDefault();
+          setPctFromEvent(e);
+        });
+        function stopDrag(e) {
+          dragging = false;
+          if (range.hasPointerCapture && range.hasPointerCapture(e.pointerId)) {
+            range.releasePointerCapture(e.pointerId);
+          }
+        }
+        range.addEventListener('pointerup', stopDrag);
+        range.addEventListener('pointercancel', stopDrag);
+
+        setPct(range.value);
       });
     })();
 
