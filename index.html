@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=22" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
 <body>
 
@@ -707,46 +707,58 @@
         var range = slider.querySelector('.ba-slider__range');
         if (!range) return;
 
-        function setPct(pct) {
-          pct = Math.max(0, Math.min(100, pct));
+        var pending = null;
+        var raf = null;
+
+        function apply() {
+          raf = null;
+          if (pending === null) return;
+          var pct = pending;
+          pending = null;
           range.value = pct;
           slider.style.setProperty('--pos', pct + '%');
         }
 
-        function setPctFromEvent(e) {
-          var rect = slider.getBoundingClientRect();
-          var pct = ((e.clientX - rect.left) / rect.width) * 100;
-          setPct(pct);
+        function queuePct(pct) {
+          pct = Math.max(0, Math.min(100, pct));
+          pending = pct;
+          if (raf === null) raf = requestAnimationFrame(apply);
         }
 
-        // Clavier / lecteurs d'écran : géré nativement par l'input range
+        function pctFromEvent(e) {
+          var rect = slider.getBoundingClientRect();
+          return ((e.clientX - rect.left) / rect.width) * 100;
+        }
+
+        // Clavier / lecteurs d'écran : géré nativement par l'input range (focusable, pointer-events désactivés en CSS)
         range.addEventListener('input', function () {
           slider.style.setProperty('--pos', range.value + '%');
         });
 
-        // Souris + tactile : on pilote nous-mêmes le glisser via Pointer Events,
-        // plus fiable que le drag natif du range sur mobile.
+        // Souris + tactile : glisser piloté sur tout le bloc slider (pas sur l'input natif,
+        // peu fiable en drag continu sur mobile), avec throttle via requestAnimationFrame.
         var dragging = false;
-        range.addEventListener('pointerdown', function (e) {
+        slider.addEventListener('pointerdown', function (e) {
+          if (e.target.closest('.ba-nav')) return;
           dragging = true;
-          range.setPointerCapture(e.pointerId);
-          setPctFromEvent(e);
+          try { slider.setPointerCapture(e.pointerId); } catch (err) {}
+          queuePct(pctFromEvent(e));
         });
-        range.addEventListener('pointermove', function (e) {
+        slider.addEventListener('pointermove', function (e) {
           if (!dragging) return;
           e.preventDefault();
-          setPctFromEvent(e);
+          queuePct(pctFromEvent(e));
         });
         function stopDrag(e) {
           dragging = false;
-          if (range.hasPointerCapture && range.hasPointerCapture(e.pointerId)) {
-            range.releasePointerCapture(e.pointerId);
+          if (slider.hasPointerCapture && slider.hasPointerCapture(e.pointerId)) {
+            slider.releasePointerCapture(e.pointerId);
           }
         }
-        range.addEventListener('pointerup', stopDrag);
-        range.addEventListener('pointercancel', stopDrag);
+        slider.addEventListener('pointerup', stopDrag);
+        slider.addEventListener('pointercancel', stopDrag);
 
-        setPct(range.value);
+        slider.style.setProperty('--pos', range.value + '%');
       });
     })();
 

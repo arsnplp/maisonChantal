@@ -1440,6 +1440,8 @@ a.contact-row:hover span:last-child {
   box-shadow: 0 12px 36px rgba(95,74,55,0.18);
   margin-bottom: 20px;
   user-select: none;
+  cursor: ew-resize;
+  touch-action: none;
 }
 
 .ba-slider__before-wrap,
@@ -1455,6 +1457,7 @@ a.contact-row:hover span:last-child {
 .ba-slider__after-wrap {
   z-index: 2;
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  will-change: clip-path;
 }
 
 .ba-slider__img {
@@ -1522,12 +1525,11 @@ a.contact-row:hover span:last-child {
   height: 100%;
   margin: 0;
   opacity: 0;
-  cursor: ew-resize;
+  pointer-events: none;
   -webkit-appearance: none;
   appearance: none;
   outline: none;
   background: transparent;
-  touch-action: none;
   z-index: 5;
 }
 
