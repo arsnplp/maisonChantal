@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=19" />
 </head>
 <body>
 
@@ -355,61 +355,113 @@
       <h2 class="avantapres__title">Lash Lift Coréen</h2>
     </div>
 
-    <div class="stack-section">
+    <div class="avantapres__intro">
+      <p class="avantapres__eyebrow">SUBLIMEZ VOTRE REGARD</p>
+      <p class="avantapres__para">
+        Chaque geste est pensé pour sublimer votre regard naturellement et durablement.
+        Le <strong>Lash Lift Coréen</strong> — sans colle, sans extension — courbe et redresse vos cils naturels en douceur.
+        La <strong>teinture</strong> intensifie leur couleur pour un regard plus intense au réveil.
+        Le résultat est <strong>lumineux et sophistiqué</strong>, pour un regard profond qui dure plusieurs semaines.
+        Tout est personnalisé selon la forme de vos yeux et vos envies.
+      </p>
+      <p class="avantapres__hint">Faites glisser la photo pour découvrir le résultat →</p>
+    </div>
 
-      <!-- ── Photos (gauche sur PC) — wheel carousel ── -->
-      <div class="stack-photos">
-        <div class="wheel-stage">
-          <div class="wheel-card" data-idx="0"><picture>
-                <source srcset="photo/rotation/lash-lift-apres.avif" type="image/avif">
-                <source srcset="photo/rotation/lash-lift-apres.webp" type="image/webp">
-                <img src="photo/rotation/lash-lift-apres.jpg" alt="Après le Lash Lift Coréen — regard sublimé" loading="lazy" />
-              </picture></div>
-          <div class="wheel-card" data-idx="1"><picture>
-                <source srcset="photo/rotation/lash-lift-detail.avif" type="image/avif">
-                <source srcset="photo/rotation/lash-lift-detail.webp" type="image/webp">
-                <img src="photo/rotation/lash-lift-detail.jpg" alt="Résultat Lash Lift Coréen — cils courbés" loading="lazy" />
-              </picture></div>
-          <div class="wheel-card" data-idx="2"><picture>
-                <source srcset="photo/rotation/lash-lift-regard.avif" type="image/avif">
-                <source srcset="photo/rotation/lash-lift-regard.webp" type="image/webp">
-                <img src="photo/rotation/lash-lift-regard.jpg" alt="Lash Lift Coréen — regard lumineux" loading="lazy" />
-              </picture></div>
+    <div class="ba-grid">
+
+      <div class="ba-item is-active">
+        <div class="ba-slider" style="--pos:50%">
+          <div class="ba-slider__before-wrap">
+            <picture>
+              <source srcset="photo/rotation/before-1.avif" type="image/avif">
+              <source srcset="photo/rotation/before-1.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/before-1.jpg" alt="Avant le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--before">Avant</span>
+          </div>
+          <div class="ba-slider__after-wrap">
+            <picture>
+              <source srcset="photo/rotation/after-1.avif" type="image/avif">
+              <source srcset="photo/rotation/after-1.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/after-1.jpg" alt="Après le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--after">Après</span>
+          </div>
+          <div class="ba-slider__handle" aria-hidden="true"></div>
+          <input type="range" class="ba-slider__range" min="0" max="100" value="50" aria-label="Faites glisser pour comparer avant et après" />
+          <button type="button" class="ba-nav ba-nav--prev" aria-label="Avant/après précédent">‹</button>
+          <button type="button" class="ba-nav ba-nav--next" aria-label="Avant/après suivant">›</button>
         </div>
+        <blockquote class="ba-item__quote">
+          <p>« Je me réveille avec un regard sublimé sans rien faire, exactement ce que je voulais. »</p>
+          <cite>— Laura, Lash Lift Coréen</cite>
+        </blockquote>
       </div>
 
-      <!-- ── Sidebar (droite sur PC, cachée sur mobile) ── -->
-      <aside class="stack-sidebar">
-        <div class="stack-sidebar__content">
-          <p class="stack-sidebar__eyebrow">SUBLIMEZ VOTRE REGARD</p>
-          <h3 class="stack-sidebar__title">avec le Lash Lift Coréen<br>&amp; la beauté du regard</h3>
-
-          <p class="stack-sidebar__para">
-            Chaque geste est pensé pour sublimer votre regard naturellement et durablement.
-            Le <strong>Lash Lift Coréen</strong> — sans colle, sans extension — courbe et redresse vos cils naturels en douceur.
-            La <strong>teinture</strong> intensifie leur couleur pour un regard plus intense au réveil.
-            Le résultat est <strong>lumineux et sophistiqué</strong>, pour un regard profond qui dure plusieurs semaines.
-            Tout est personnalisé selon la forme de vos yeux et vos envies.
-          </p>
-
-          <p class="stack-sidebar__reviews-label">CE QU'ELLES EN PENSENT</p>
-          <div class="stack-reviews-wrap">
-            <div class="stack-review active" data-idx="0">
-              <p class="stack-review__quote">« Je me réveille avec un regard sublimé sans rien faire, exactement ce que je voulais. »</p>
-              <p class="stack-review__author">— Laura, Lash Lift Coréen</p>
-            </div>
-            <div class="stack-review" data-idx="1">
-              <p class="stack-review__quote">« J'avais peur que ce soit trop marqué mais le rendu est naturel et hyper lumineux. »</p>
-              <p class="stack-review__author">— Sophie, Lash Lift Coréen</p>
-            </div>
-            <div class="stack-review" data-idx="2">
-              <p class="stack-review__quote">« Un résultat bluffant sans une seule extension, mes cils n'ont jamais été aussi beaux. »</p>
-              <p class="stack-review__author">— Émilie, Lash Lift Coréen</p>
-            </div>
+      <div class="ba-item">
+        <div class="ba-slider" style="--pos:50%">
+          <div class="ba-slider__before-wrap">
+            <picture>
+              <source srcset="photo/rotation/before-2.avif" type="image/avif">
+              <source srcset="photo/rotation/before-2.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/before-2.jpg" alt="Avant le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--before">Avant</span>
           </div>
+          <div class="ba-slider__after-wrap">
+            <picture>
+              <source srcset="photo/rotation/after-2.avif" type="image/avif">
+              <source srcset="photo/rotation/after-2.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/after-2.jpg" alt="Après le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--after">Après</span>
+          </div>
+          <div class="ba-slider__handle" aria-hidden="true"></div>
+          <input type="range" class="ba-slider__range" min="0" max="100" value="50" aria-label="Faites glisser pour comparer avant et après" />
+          <button type="button" class="ba-nav ba-nav--prev" aria-label="Avant/après précédent">‹</button>
+          <button type="button" class="ba-nav ba-nav--next" aria-label="Avant/après suivant">›</button>
         </div>
-      </aside>
+        <blockquote class="ba-item__quote">
+          <p>« J'avais peur que ce soit trop marqué mais le rendu est naturel et hyper lumineux. »</p>
+          <cite>— Sophie, Lash Lift Coréen</cite>
+        </blockquote>
+      </div>
 
+      <div class="ba-item">
+        <div class="ba-slider" style="--pos:50%">
+          <div class="ba-slider__before-wrap">
+            <picture>
+              <source srcset="photo/rotation/before-3.avif" type="image/avif">
+              <source srcset="photo/rotation/before-3.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/before-3.jpg" alt="Avant le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--before">Avant</span>
+          </div>
+          <div class="ba-slider__after-wrap">
+            <picture>
+              <source srcset="photo/rotation/after-3.avif" type="image/avif">
+              <source srcset="photo/rotation/after-3.webp" type="image/webp">
+              <img class="ba-slider__img" src="photo/rotation/after-3.jpg" alt="Après le Lash Lift Coréen" loading="lazy" />
+            </picture>
+            <span class="ba-slider__tag ba-slider__tag--after">Après</span>
+          </div>
+          <div class="ba-slider__handle" aria-hidden="true"></div>
+          <input type="range" class="ba-slider__range" min="0" max="100" value="50" aria-label="Faites glisser pour comparer avant et après" />
+          <button type="button" class="ba-nav ba-nav--prev" aria-label="Avant/après précédent">‹</button>
+          <button type="button" class="ba-nav ba-nav--next" aria-label="Avant/après suivant">›</button>
+        </div>
+        <blockquote class="ba-item__quote">
+          <p>« Un résultat bluffant sans une seule extension, mes cils n'ont jamais été aussi beaux. »</p>
+          <cite>— Émilie, Lash Lift Coréen</cite>
+        </blockquote>
+      </div>
+
+    </div>
+
+    <div class="ba-dots">
+      <button type="button" class="ba-dot is-active" aria-label="Voir l'avant/après 1"></button>
+      <button type="button" class="ba-dot" aria-label="Voir l'avant/après 2"></button>
+      <button type="button" class="ba-dot" aria-label="Voir l'avant/après 3"></button>
     </div>
   </section>
 
@@ -651,34 +703,48 @@
 
   <script>
     (function () {
-      var current = 0;
-      var total = 3;
+      document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var range = slider.querySelector('.ba-slider__range');
+        if (!range) return;
+        function update() {
+          slider.style.setProperty('--pos', range.value + '%');
+        }
+        range.addEventListener('input', update);
+        update();
+      });
+    })();
 
-      function renderWheel(idx) {
-        var prevIdx = (idx - 1 + total) % total;
-        var nextIdx = (idx + 1) % total;
-        document.querySelectorAll('.wheel-card').forEach(function (card) {
-          var ci = parseInt(card.dataset.idx);
-          if (ci === idx)      card.dataset.state = 'active';
-          else if (ci === prevIdx) card.dataset.state = 'prev';
-          else if (ci === nextIdx) card.dataset.state = 'next';
-          else                     card.dataset.state = 'gone-down';
-        });
+    // Carousel mobile — flèches + points pour naviguer entre les 3 avant/après
+    (function () {
+      var grid = document.querySelector('.ba-grid');
+      if (!grid) return;
+      var items = Array.prototype.slice.call(grid.querySelectorAll('.ba-item'));
+      var dots = Array.prototype.slice.call(document.querySelectorAll('.ba-dot'));
+      var idx = 0;
 
-        document.querySelectorAll('.stack-review').forEach(function (r) {
-          r.classList.remove('active');
+      function render() {
+        items.forEach(function (item, i) {
+          item.classList.toggle('is-active', i === idx);
         });
-        var rev = document.querySelector('.stack-review[data-idx="' + idx + '"]');
-        if (rev) rev.classList.add('active');
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('is-active', i === idx);
+        });
       }
 
-      function next() {
-        current = (current + 1) % total;
-        renderWheel(current);
+      function go(dir) {
+        idx = (idx + dir + items.length) % items.length;
+        render();
       }
 
-      renderWheel(0);
-      setInterval(next, 3200);
+      grid.querySelectorAll('.ba-nav--prev').forEach(function (btn) {
+        btn.addEventListener('click', function () { go(-1); });
+      });
+      grid.querySelectorAll('.ba-nav--next').forEach(function (btn) {
+        btn.addEventListener('click', function () { go(1); });
+      });
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { idx = i; render(); });
+      });
     })();
   </script>
 
