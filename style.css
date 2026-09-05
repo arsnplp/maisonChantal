@@ -1352,6 +1352,11 @@ a.contact-row:hover span:last-child {
   margin-bottom: 20px;
 }
 
+.apropos__para strong {
+  color: var(--brown);
+  font-weight: 600;
+}
+
 /* ══════════════════════════════════════════════
    SECTION 5 — LASH LIFT CORÉEN  (crème — stack scroll)
 ══════════════════════════════════════════════ */
