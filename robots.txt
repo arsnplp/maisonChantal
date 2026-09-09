@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://maison-chantal.fr/sitemap.xml
+Sitemap: https://maisonchantal.fr/sitemap.xml
