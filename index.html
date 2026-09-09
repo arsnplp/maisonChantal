@@ -85,7 +85,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=27" />
+  <link rel="stylesheet" href="style.css?v=28" />
 </head>
 <body>
 
@@ -133,35 +133,22 @@
   </div>
 
   <!-- ══════════════════════════════════════
-       HERO  — bande + photo
+       HERO  — photo plein écran, signature
   ══════════════════════════════════════ -->
-  <section class="hsplit">
-    <h1 class="hsplit__bigtitle">
-      <span class="hsplit__bigtitle-l1">Mais<span class="hsplit__bigtitle-l1-alt">on</span></span>
-      <span class="hsplit__bigtitle-l2">Chantal</span>
-    </h1>
-    <div class="hsplit__band">
-      <div class="hsplit__band-top">
-        <p class="hsplit__suptitle">Head Spa &amp; Institut de Beauté<br>à Lambesc, près d'Aix-en-Provence</p>
-      </div>
-      <a class="hsplit__thumb" href="#infos" aria-label="Voir l'institut">
-        <picture>
-          <source srcset="photo/institut/institut-2.avif" type="image/avif">
-          <source srcset="photo/institut/institut-2.webp" type="image/webp">
-          <img src="photo/institut/institut-2.jpg" alt="L'institut Maison Chantal" loading="lazy" />
-        </picture>
-        <span>Maison Chantal</span>
-      </a>
-    </div>
-    <div class="hsplit__photo">
+  <section class="mchero">
+    <div class="mchero__photo">
       <picture>
         <source srcset="photo/header.avif" type="image/avif">
         <source srcset="photo/header.webp" type="image/webp">
-        <img src="photo/header.jpg" alt="Rituel de relaxation Maison Chantal" />
+        <img src="photo/header.jpg" alt="Rituel de Head Spa japonais chez Maison Chantal" />
       </picture>
-      <div class="hsplit__caption">
-        <p>Choisissez le soin qui vous correspond aujourd'hui et réservez votre créneau — le reste, c'est nous qui nous en occupons.</p>
-      </div>
+    </div>
+    <div class="mchero__overlay"></div>
+    <div class="mchero__content">
+      <p class="mchero__eyebrow">Head Spa &amp; Institut de Beauté</p>
+      <h1 class="mchero__title">Maison Chantal</h1>
+      <p class="mchero__tagline">à Lambesc, près d'Aix-en-Provence</p>
+      <a class="mchero__cta" href="tel:+33651375834">Réserver ma séance</a>
     </div>
   </section>
 
