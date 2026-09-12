@@ -515,87 +515,64 @@
         },
         {
           "@type": "OfferCatalog",
-          "name": "Soins Homme",
+          "name": "Soin Visage",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Nez"
+                "name": "Équilibre Nourrissant",
+                "description": "Nourrit les peaux normales à tendance sèche. Durée : 50 min."
               },
-              "price": "10",
+              "price": "62",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Sourcils"
+                "name": "Équilibre Purifiant",
+                "description": "Purifie les peaux normales à tendance grasse. Durée : 1h."
               },
-              "price": "15",
+              "price": "65",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dos (épaules ou torse + épaules)"
+                "name": "Sublim'Eyes",
+                "description": "Soin défatigant hydratant contour des yeux. Atténue les cernes et les poches. Décongestionne et hydrate. Durée : 40 min."
               },
-              "price": "26",
+              "price": "50",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Demi-jambes"
+                "name": "Aqua Phys",
+                "description": "Hydrate, désaltère et rafraîchit toutes les peaux. Durée : 1h15."
               },
-              "price": "25",
+              "price": "78",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Cuisses"
+                "name": "Multi-Vita",
+                "description": "Soin multivitaminé aux actifs puissants luttant contre le vieillissement. Durée : 1h15."
               },
-              "price": "30",
+              "price": "95",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Jambes complètes"
-              },
-              "price": "35",
-              "priceCurrency": "EUR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aisselles"
-              },
-              "price": "15",
-              "priceCurrency": "EUR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Phyt's Men",
-                "description": "Purifiant, équilibrant, anti-âge, défatigant. Durée : 1h."
-              },
-              "price": "70",
-              "priceCurrency": "EUR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Anti-âge",
-                "description": "Soin anti-âge Panacée réalisé avec le Dermophyt's, appareil à ondes sonores permettant de travailler en profondeur les tissus, tous types de peaux. Durée : 1h30."
+                "name": "Panacée",
+                "description": "Soin anti-âge réalisé avec le Dermophyt's, appareil à micro-courants permettant de travailler en profondeur les tissus. Estompe les rides, lifte, resculpte, raffermit, repulpe, régénère, nourrit, hydrate et unifie tous types de peaux. Durée : 1h30."
               },
               "price": "120",
               "priceCurrency": "EUR"
@@ -613,7 +590,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="photo/favicon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="photo/favicon-192.png" />
-  <link rel="stylesheet" href="style.css?v=29" />
+  <link rel="stylesheet" href="style.css?v=37" />
 </head>
 <body>
 
@@ -661,7 +638,40 @@
   </div>
 
   <!-- ══════════════════════════════════════
-       HERO  — photo plein écran, signature
+       HERO desktop — bande marron + photo
+  ══════════════════════════════════════ -->
+  <section class="hsplit">
+    <p class="hsplit__bigtitle">
+      <span class="hsplit__bigtitle-l1">Mais<span class="hsplit__bigtitle-l1-alt">on</span></span>
+      <span class="hsplit__bigtitle-l2">Chantal</span>
+    </p>
+    <div class="hsplit__band">
+      <div class="hsplit__band-top">
+        <p class="hsplit__suptitle">Head Spa &amp; Institut de Beauté<br>à Lambesc, près d'Aix-en-Provence</p>
+      </div>
+      <a class="hsplit__thumb" href="#infos" aria-label="Voir l'institut">
+        <picture>
+          <source srcset="photo/institut/institut-2.avif" type="image/avif">
+          <source srcset="photo/institut/institut-2.webp" type="image/webp">
+          <img src="photo/institut/institut-2.jpg" alt="L'institut Maison Chantal" loading="lazy" />
+        </picture>
+        <span>Maison Chantal</span>
+      </a>
+    </div>
+    <div class="hsplit__photo">
+      <picture>
+        <source srcset="photo/header.avif" type="image/avif">
+        <source srcset="photo/header.webp" type="image/webp">
+        <img src="photo/header.jpg" alt="Rituel de Head Spa japonais chez Maison Chantal" />
+      </picture>
+      <div class="hsplit__caption">
+        <p>Choisissez le soin qui vous correspond aujourd'hui et réservez votre créneau — le reste, c'est nous qui nous en occupons.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HERO mobile — photo plein écran, signature
   ══════════════════════════════════════ -->
   <section class="mchero">
     <div class="mchero__photo">
@@ -839,17 +849,17 @@
           <p class="arch-price">Dès 14 €</p>
         </button>
 
-        <button type="button" class="arch-card" data-category="homme" aria-haspopup="dialog">
+        <button type="button" class="arch-card" data-category="visage" aria-haspopup="dialog">
           <div class="arch-frame">
             <picture>
-                <source srcset="photo/prestations/soins-homme.avif" type="image/avif">
-                <source srcset="photo/prestations/soins-homme.webp" type="image/webp">
-                <img src="photo/prestations/soins-homme.jpg" alt="Soins Homme" loading="lazy" />
+                <source srcset="photo/prestations/soin-visage.avif" type="image/avif">
+                <source srcset="photo/prestations/soin-visage.webp" type="image/webp">
+                <img src="photo/prestations/soin-visage.jpg" alt="Soin du visage chez Maison Chantal" loading="lazy" />
               </picture>
           </div>
-          <p class="arch-name">Soins Homme</p>
-          <p class="arch-desc">Épilations &amp; soin du visage sur mesure</p>
-          <p class="arch-price">Dès 10 €</p>
+          <p class="arch-name">Soin Visage</p>
+          <p class="arch-desc">Soins sur mesure, hydratation &amp; anti-âge</p>
+          <p class="arch-price">Dès 50 €</p>
         </button>
 
       </div><!-- /arch-grid -->
@@ -1415,21 +1425,16 @@
             { name: 'Réhaussement des cils', duration: '1h', price: '42 €' }
           ]
         },
-        'homme': {
-          title: 'Soins Homme',
-          image: 'photo/prestations/soins-homme.jpg',
+        'visage': {
+          title: 'Soin Visage',
+          image: 'photo/prestations/soin-visage.jpg',
           items: [
-            { heading: 'Épilations' },
-            { name: 'Nez', price: '10 €' },
-            { name: 'Sourcils', price: '15 €' },
-            { name: 'Dos (épaules ou torse + épaules)', price: '26 €' },
-            { name: 'Demi-jambes', price: '25 €' },
-            { name: 'Cuisses', price: '30 €' },
-            { name: 'Jambes complètes', price: '35 €' },
-            { name: 'Aisselles', price: '15 €' },
-            { heading: 'Soin Visage' },
-            { name: "Phyt's Men", duration: '1h', price: '70 €', desc: 'Purifiant, équilibrant, anti-âge, défatigant.' },
-            { name: 'Anti-âge', duration: '1h30', price: '120 €', desc: "Soin anti-âge Panacée réalisé avec le Dermophyt's, appareil à ondes sonores permettant de travailler en profondeur les tissus, tous types de peaux." }
+            { name: 'Équilibre Nourrissant', duration: '50 min', price: '62 €', desc: 'Nourrit les peaux normales à tendance sèche.' },
+            { name: 'Équilibre Purifiant', duration: '1h', price: '65 €', desc: 'Purifie les peaux normales à tendance grasse.' },
+            { name: "Sublim'Eyes", duration: '40 min', price: '50 €', desc: 'Soin défatigant hydratant contour des yeux. Atténue les cernes et les poches. Décongestionne et hydrate.' },
+            { name: 'Aqua Phys', duration: '1h15', price: '78 €', desc: 'Hydrate, désaltère et rafraîchit toutes les peaux.' },
+            { name: 'Multi-Vita', duration: '1h15', price: '95 €', desc: 'Soin multivitaminé aux actifs puissants luttant contre le vieillissement.' },
+            { name: 'Panacée', duration: '1h30', price: '120 €', desc: "Soin anti-âge réalisé avec le Dermophyt's, appareil à micro-courants permettant de travailler en profondeur les tissus. Estompe les rides, lifte, resculpte, raffermit, repulpe, régénère, nourrit, hydrate et unifie tous types de peaux." }
           ]
         }
       };
